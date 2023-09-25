@@ -50,6 +50,7 @@ const employees = {
     Bob: 29,
   };
   console.log(findBestEmployee(employees));
+  
 //4
 function countTotalSalary(employees) {
     let finalSalary = 0;
@@ -94,9 +95,23 @@ const products = [
 console.log(getAllPropValues(products, 'salary'));
 
 //6
-function calculateTotalPrice(allProdcuts, productName) {
-    
-}
+const productsTwo = [
+    { name: 'car', price: 78, quantity: 7 },
+    { name: 'bus', price: 90, quantity: 2 },
+    { name: 'plane', price: 1000, quantity: 8 },
+    { name: 'train', price: 67, quantity: 4},
+];
+  
+const calculateTotalPrice = function (allProdcuts, productName) {
+    for (const prodcut of allProdcuts) {
+        if (prodcut.name === productName) {
+            return prodcut.price * prodcut.quantity;
+          }
+        }
+};
+  
+console.log(calculateTotalPrice(productsTwo, 'car'));
+console.log(calculateTotalPrice(productsTwo, 'plane'));
 
 //7
 
